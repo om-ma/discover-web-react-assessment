@@ -5,9 +5,15 @@ import { DARK_MODE_THEME } from "./styles/constants";
 import { getAppTheme } from "./styles/theme";
 import { Main } from "./pages/main";
 
-import routes, { auth, nextSteps, TRoute } from "./routes";
+import routes, { auth, customerClaimForm, TRoute } from "./routes";
 import Verification from "./pages/verification";
 import { NotFound } from "./pages/not-found";
+import { CustomerClaimForm } from "./pages/customer-claim-form";
+import { FormTable } from "./pages/form-table";
+import { EditForm } from "./pages/edit-form";
+import { FtxDetails } from "./pages/edit-form-steps/ftx-details";
+import { SubmitInformation } from "./pages/edit-form-steps/submit-information";
+import { ScheduleClaim } from "./pages/edit-form-steps/schedule-claim";
 
 /**
  * The addRoute function takes a route object, extracts the component, and returns a Route element with
@@ -33,7 +39,6 @@ function App() {
           sx={{
             height: "100vh",
             backgroundColor: "#0B0E16",
-            mb: 3,
           }}
         >
           <Routes>
@@ -41,7 +46,7 @@ function App() {
               {routes.map((route: TRoute) => {
                 const Component = route.component;
                 const isFirstStep = route.key === auth;
-                const isLastStep = route.key === nextSteps;
+                const isLastStep = route.key === customerClaimForm;
                 const Comp = (
                   <Box
                     sx={{
@@ -49,7 +54,7 @@ function App() {
                       backgroundColor: "#1D1F2B",
                       p: 1,
                       mb: 10,
-                      width: "800px"
+                      width: "800px",
                     }}
                   >
                     <Component />
@@ -76,6 +81,14 @@ function App() {
               path="/idensic-verification-123456"
               element={<Verification />}
             />
+            <Route path="/customer-claim-form" element={<CustomerClaimForm />}>
+              <Route path="" element={<FormTable />} />
+              <Route path="edit" element={<EditForm />}>
+                <Route path="" element={<FtxDetails />} />
+                <Route path="schedule-claim" element={<ScheduleClaim />} />
+                <Route path="submission-info" element={<SubmitInformation />} />
+              </Route>
+            </Route>
             <Route path="*" element={<NotFound />} />
           </Routes>
         </Box>

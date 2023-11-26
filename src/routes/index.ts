@@ -1,7 +1,7 @@
 import { Kyc } from "./../pages/kyc";
 import { Authentication } from "./../pages/authentication";
 import { ReviewAccountBalances } from "./../pages/review-account-balances";
-import { NextSteps } from "./../pages/next-steps";
+import { CustomerClaimForm } from "../pages/customer-claim-form";
 import { SubmissionClaimProof } from "./../pages/submission-claim-proof";
 import { ConfirmEmail } from "./../pages/confirm-email";
 
@@ -27,7 +27,8 @@ export const confirmEmail = "confirm-email";
 export const kyc = "kyc";
 export const wallet = "wallet";
 export const krollPortal = "kroll-portal";
-export const nextSteps = "next-steps";
+export const customerClaimForm = "customer-claim-form";
+export const formTable = "form-table";
 
 const routes: TRoute[] = [
   {
@@ -56,9 +57,9 @@ const routes: TRoute[] = [
     path: "/kroll-portal",
   },
   {
-    key: nextSteps,
-    component: NextSteps,
-    path: "/next-steps",
+    key: customerClaimForm,
+    component: CustomerClaimForm,
+    path: "/customer-claim-form",
   },
 ];
 
