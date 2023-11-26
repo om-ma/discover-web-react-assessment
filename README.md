@@ -1,3 +1,29 @@
+# App Screenshots
+
+## Initial UI
+
+![Alt Text](/screenshots/initial-ui.png)
+
+## Verification
+
+![Alt Text](/screenshots/Verificaiton.png)
+
+## Customer Claim Form
+
+![Alt Text](/screenshots/Customer-claim.png)
+
+## Edit Form
+
+![Alt Text](/screenshots/Edit-form.png)
+
+## Schedule Claim Information
+
+![Alt Text](/screenshots/schedule-claim.png)
+
+## Submission Information
+
+![Alt Text](/screenshots/submit-info.png)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
