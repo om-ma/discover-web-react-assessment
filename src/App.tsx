@@ -12,7 +12,7 @@ import { CustomerClaimForm } from "./pages/customer-claim-form";
 import { FormTable } from "./pages/form-table";
 import { EditForm } from "./pages/edit-form";
 import { FtxDetails } from "./pages/edit-form-steps/ftx-details";
-import { SubmitInformation } from "./pages/edit-form-steps/submit-information";
+import { SubmitInformation } from "./pages/edit-form-steps/submit-info";
 import { ScheduleClaim } from "./pages/edit-form-steps/schedule-claim";
 
 /**

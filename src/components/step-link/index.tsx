@@ -8,7 +8,7 @@ import routes, {
   confirmEmail,
   krollPortal,
   kyc,
-  nextSteps,
+  customerClaimForm,
   TRoute,
   wallet,
 } from "../../routes";
@@ -22,7 +22,7 @@ const stepNumber: { [key: string]: number } = {
   kyc: 3,
   wallet: 4,
   "kroll-portal": 5,
-  "next-steps": 6,
+  "customer-claim-form": 6,
 };
 
 const stepIcon: { [key: string]: any } = {
@@ -31,7 +31,7 @@ const stepIcon: { [key: string]: any } = {
   [kyc]: VerifiedTick,
   [wallet]: NotStartedRing,
   [krollPortal]: VerifiedTick,
-  [nextSteps]: LockedLock,
+  [customerClaimForm]: LockedLock,
 };
 const stepColor: { [key: string]: string } = {
   authentication: "#0be68b",
@@ -39,7 +39,7 @@ const stepColor: { [key: string]: string } = {
   kyc: "#0be68b",
   wallet: "#46e9ff",
   "kroll-portal": "#0be68b",
-  "next-steps": "#878a9b",
+  "customer-claim-form": "#878a9b",
 };
 
 const stepTitle: { [key: string]: string } = {
@@ -48,7 +48,7 @@ const stepTitle: { [key: string]: string } = {
   kyc: "KYC",
   wallet: "Review Account Balances",
   "kroll-portal": "Submission of Electronic\nProof of Claim",
-  "next-steps": "Standby for the next steps",
+  "customer-claim-form": "Standby for the next steps",
 };
 
 const stepDesc: { [key: string]: string } = {
@@ -72,7 +72,7 @@ export default function StepLink({ item }: { item: TRoute }) {
   const routeKey = !!matchedDataList ? matchedDataList[0].route.key : null;
   const isMatched: boolean = item.key === routeKey;
   const isFirstStep = item.key === auth;
-  const isLastStep = item.key === nextSteps;
+  const isLastStep = item.key === customerClaimForm;
   const StepIcon: any = stepIcon[item.key];
 
   const heroComp = (
@@ -120,7 +120,13 @@ export default function StepLink({ item }: { item: TRoute }) {
         <Typography
           variant="body2"
           color={stepColor[item.key]}
-          sx={{ fontWeight: "400", textTransform: "uppercase", lineHeight: "1.5", fontSize: "12px", marginLeft: "-3px", }}
+          sx={{
+            fontWeight: "400",
+            textTransform: "uppercase",
+            lineHeight: "1.5",
+            fontSize: "12px",
+            marginLeft: "-3px",
+          }}
         >
           Step {stepNumber[item.key]}
         </Typography>
@@ -135,7 +141,15 @@ export default function StepLink({ item }: { item: TRoute }) {
         <Typography
           variant="subtitle2"
           color="#fff"
-          sx={{ textDecoration: "none", fontSize: "12px", fontWeight: "600", lineHeight: "1.5", marginLeft: "-3px", whiteSpace: "pre-line", letterSpacing: "0.02em" }}
+          sx={{
+            textDecoration: "none",
+            fontSize: "12px",
+            fontWeight: "600",
+            lineHeight: "1.5",
+            marginLeft: "-3px",
+            whiteSpace: "pre-line",
+            letterSpacing: "0.02em",
+          }}
         >
           {stepTitle[item.key]}
         </Typography>
@@ -150,8 +164,18 @@ export default function StepLink({ item }: { item: TRoute }) {
       >
         {isMatched ? (
           <Box sx={{ my: 1, mx: 1 }}>
-            <Typography variant="subtitle2" color="#a9a9a9"
-            sx={{ fontSize: "12px", fontWeight: "500", lineHeight: "1.5", color: "rgb(135, 138, 155)", marginLeft: "0px", marginTop: "-7px", whiteSpace: "pre-line" }}
+            <Typography
+              variant="subtitle2"
+              color="#a9a9a9"
+              sx={{
+                fontSize: "12px",
+                fontWeight: "500",
+                lineHeight: "1.5",
+                color: "rgb(135, 138, 155)",
+                marginLeft: "0px",
+                marginTop: "-7px",
+                whiteSpace: "pre-line",
+              }}
             >
               {stepDesc[item.key]}
             </Typography>
@@ -169,7 +193,7 @@ export default function StepLink({ item }: { item: TRoute }) {
         }}
       >
         <Typography variant="subtitle2" color="#fff">
-          <KeyboardArrowRightIcon sx={{marginLeft:"-29px"}} />
+          <KeyboardArrowRightIcon sx={{ marginLeft: "-29px" }} />
         </Typography>
       </Box>
     </Box>

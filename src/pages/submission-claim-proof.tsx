@@ -17,6 +17,7 @@ export const SubmissionClaimProof = () => {
   const fileProofOfClaim = () => {
     setIsLoading(true);
     timeoutRef.current = setTimeout(() => {
+      window.open(`${window.location.origin}/customer-claim-form`, "_blank");
       setIsLoading(false);
     }, 2000);
   };
@@ -36,7 +37,7 @@ export const SubmissionClaimProof = () => {
         gap: 3,
         justifyContent: "flex-start",
         flexDirection: "column",
-        width: "800px"
+        width: "800px",
       }}
     >
       <Typography variant="h6" component="h6" fontWeight="bold">

@@ -7,7 +7,6 @@ import MenuItem from "@mui/material/MenuItem";
 import Divider from "@mui/material/Divider";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import { Box, Chip, FormLabel, Typography } from "@mui/material";
-import { DataGrid, GridColDef, GridValueGetterParams } from "@mui/x-data-grid";
 import {
   ArrowDropDown,
   KeyboardArrowLeft,
@@ -16,7 +15,6 @@ import {
   KeyboardDoubleArrowRight,
   Search,
 } from "@mui/icons-material";
-import Pagination from "@mui/material/Pagination";
 import { InputField } from "../components/input-field";
 import CustomerClaimTable from "../components/customer-claim-table";
 
