@@ -37,6 +37,7 @@ const WrapBox = ({ children }: { children: JSX.Element }) => (
       display: "flex",
       justifyContent: "center",
       alignItems: "center",
+      fontWeight: "bold",
       gap: 2,
     }}
   >
@@ -105,6 +106,7 @@ const columns: GridColDef[] = [
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
+            fontWeight: "bold",
             gap: 1,
           }}
         >
@@ -118,7 +120,7 @@ const columns: GridColDef[] = [
   {
     field: "col3",
     headerName: "Subaccount Balance",
-    width: 200,
+    width: 270,
     headerAlign: "right",
     align: "right",
   },
@@ -292,7 +294,7 @@ export default function AccBalancesTable() {
     });
 
   return (
-    <Box sx={{ p: 2, py: 1 }}>
+    <Box sx={{ p: 2, py: 1, fontWeight: "bold" }}>
       <DataGrid
         rows={_rows}
         columns={columns}
@@ -311,7 +313,12 @@ export default function AccBalancesTable() {
             showQuickFilter: true,
           },
         }}
-        sx={{ border: "none", borderBottom: 1, borderBottomColor: "#aaaaaa6f" }}
+        sx={{
+          border: "none",
+          borderBottom: 1,
+          borderBottomColor: "#aaaaaa6f",
+          fontWeight: "bold",
+        }}
       />
     </Box>
   );

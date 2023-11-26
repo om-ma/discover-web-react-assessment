@@ -61,7 +61,7 @@ export default function Verification() {
           justifyContent: "flex-start",
           alignItems: "center",
           backgroundColor: "#fff",
-          color: "#000",
+          color: "white",
           height: "100%",
           p: 6,
         }}
