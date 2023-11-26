@@ -2,6 +2,8 @@
 
 ## Initial UI
 
+[Loom Video Link](https://www.loom.com/share/cf0e3b55eacf4f7d865f7c915589cab8?sid=8565219e-a715-4a17-a3c5-e10d8b2f3264)
+
 ![Alt Text](/screenshots/initial-ui.png)
 
 ## Verification
