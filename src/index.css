@@ -1,0 +1,8 @@
+/* *::-webkit-scrollbar {
+  display: none;
+} */
+
+.MuiDataGrid-root .MuiDataGrid-cell {
+  white-space: normal !important;
+  word-wrap: break-word !important;
+}

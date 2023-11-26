@@ -1,0 +1,2 @@
+export const TOGGLE_HIDE_ZERO = "TOGGLE_HIDE_ZERO";
+export const SET_SEARCH_TERM = "SET_SEARCH_TERM";
